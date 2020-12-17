@@ -1,0 +1,97 @@
+.SearchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('https://images.unsplash.com/photo-1580916883250-437bcb0fec1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25rem;
+  }
+  
+  .SearchBar-sort-options ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.22rem;
+    color: #ffffff;
+  }
+  
+  .SearchBar-sort-options li {
+    cursor: pointer;
+    width: 4.33rem;
+    border-bottom: 1px solid #fff;
+    padding: 0 2.58rem .33rem 2.58rem;
+    line-height: 1.13;
+    text-align: center;
+    font-weight: 600;
+    font-size: .83rem;
+    transition: color .25s;
+  }
+  
+  .SearchBar-sort-options li:hover {
+    color: #f0a4ba;
+  }
+  
+  .SearchBar-sort-options li.active,
+  .SearchBar-sort-options li.active:hover {
+    border-bottom: 1px solid #f7bece;
+    color: #f7bece;
+  }
+  
+  .SearchBar-fields {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.88rem;
+  }
+  
+  .SearchBar-fields input {
+    width: 21rem;
+    padding: .66rem 1rem;
+    margin-right: 2.22rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: .77rem;
+    font-weight: 500;
+  }
+  
+  .SearchBar-fields input:last-child {
+    margin-right: 0;
+  }
+  
+  .SearchBar-submit {
+    text-align: center;
+  }
+  
+  .SearchBar-submit a {
+    border-radius: 4px;
+    padding: .72rem 1.7rem;
+    background-color: #f7bece;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color .5s;
+  }
+  
+  .SearchBar-submit a:hover {
+    cursor: pointer;
+    background-color: #e887a2;
+  }
+  
+  @media only screen and (max-width: 560px) {
+    .SearchBar {
+      background-image: url('https://images.unsplash.com/photo-1580916846078-19be39005e32?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2134&q=80');
+    }
+  
+    .SearchBar-sort-options ul {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  
+    .SearchBar-fields {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .SearchBar-fields input {
+      margin-right: 0;
+      margin-bottom: .86rem;
+    }
+  }
