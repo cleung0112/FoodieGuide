@@ -16,8 +16,6 @@ class App extends React.Component {
   async searchYelp(term, location, sortBy) {
 
     axios.get('/api/v1/yelp', { params: { term, location, sortBy } }).then((res) => {
-      console.log(res);
-
       this.setState({
         'businesses' : res.data.businesses,
       })
