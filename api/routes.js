@@ -2,16 +2,14 @@ const express = require('express');
 const router = express.Router();
 const fetch = require('node-fetch');
 
-const apiKey = 'QDFx-SqbZDOGW2TLXRA-RkNXmpFDUYn0GLverKgNf6Y4enSgocZcpe_8wBFduQa5fnqP9T3FDqeGftoe8P_rv74UqtXDGhMeegrnj4Dt8hxUaZCH96sJsYPiA6aTX3Yx';
-
 router.get('/yelp',  async (req, res, next) => {
     const { term, location, sortBy } = req.query;
-
+    console.log(process.env.YELP_KEY);
     try {
       const businesses = await fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
         'headers': {
           'origin': 'http://localhost:5000',
-          'Authorization': `Bearer ${apiKey}`,
+          'Authorization': `Bearer ${process.env.YELP_KEY}`,
         },
       }).then( (response) => {
         return response.json();
@@ -35,7 +33,7 @@ router.get('/yelp',  async (req, res, next) => {
       });
 
       res.status(200).json({
-        businesses
+        businesses: businesses || []
       });
     } catch (e) {
       console.log("error", e);
