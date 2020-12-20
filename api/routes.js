@@ -16,7 +16,6 @@ router.get('/yelp',  async (req, res, next) => {
       }).then( (response) => {
         return response.json();
       }).then( (jsonResponse) => {
-        console.log("test2", jsonResponse);
         if( jsonResponse['businesses'] ) {
           return jsonResponse['businesses'].map( (business) => { 
             return {
