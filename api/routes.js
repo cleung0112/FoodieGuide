@@ -6,9 +6,8 @@ router.get('/yelp',  async (req, res, next) => {
     const { term, location, sortBy } = req.query;
 
     try {
-      const businesses = await fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
+      const businesses = await fetch(`https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
         'headers': {
-          'origin': 'http://localhost:5000',
           'Authorization': `Bearer ${process.env.YELP_KEY}`,
         },
       }).then( (response) => {
