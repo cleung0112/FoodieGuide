@@ -5,4 +5,4 @@ Foodie Guide is a web search application that uses the Yelp API to return busine
 - Highest Rated
 - Most Reviewed
 
-<img src='https://media-exp1.licdn.com/dms/image/C4E2DAQHKMMLzSaGE8g/profile-treasury-image-shrink_800_800/0/1608658985030?e=1616605200&v=beta&t=Y41rXPJTEzzgRjaY52Of5vrk5JPfY52MLOEXhAOuNr8' alt='Foodie Guide Web App Screenshot' >
+<img src='https://ibb.co/DbSvQw0' alt='Foodie Guide Web App Screenshot' >
